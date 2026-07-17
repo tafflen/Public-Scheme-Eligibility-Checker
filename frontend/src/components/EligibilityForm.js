@@ -78,7 +78,8 @@ const EligibilityForm = ({ onResults }) => {
         })
       });
       const data = await response.json();
-      onResults(data.eligible || []);
+      // onResults(data.eligible || []);
+      onResults(data); 
     } catch (err) {
       console.error('Error checking eligibility:', err);
       onResults([]);

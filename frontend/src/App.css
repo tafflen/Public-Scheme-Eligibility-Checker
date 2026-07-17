@@ -152,3 +152,55 @@ body {
   font-weight: 600;
   margin: 1rem 0;
 }
+.ineligible-reasons {
+  font-size: 0.8rem;
+  color: #b91c1c;
+  margin-top: 0.5rem;
+}
+.ineligible-reasons ul {
+  margin: 0.3rem 0 0 1rem;
+}
+.voice-assistant {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.voice-btn {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.voice-btn.listening {
+  background: #ef4444;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.voice-transcript {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+.offline-banner {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.fraud-warning {
+  font-size: 0.75rem;
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  margin-top: 0.4rem;
+}
