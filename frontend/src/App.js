@@ -1,47 +1,7 @@
-// import React from 'react';
-// import EligibilityForm from './components/EligibilityForm';
-// import EligibleSchemesList from './components/EligibleSchemesList';
-
-// function App() {
-//   return (
-//     <div className="bg-gray-100 min-h-screen">
-//       <header className="bg-blue-500 text-white p-4">
-//         <h1 className="text-2xl font-bold">Government Scheme Eligibility Checker</h1>
-//       </header>
-//       <main className="container mx-auto py-6">
-//         <EligibilityForm />
-//         <EligibleSchemesList />
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-// import React, { useState } from 'react';
-// import EligibilityForm from './components/EligibilityForm';
-// import EligibleSchemesList from './components/EligibleSchemesList';
-// import './App.css';
-
-// function App() {
-//   const [results, setResults] = useState(null));
-
-//   return (
-//     <div className="app-container">
-//       <h1 className="app-title">Government Scheme Eligibility Checker</h1>
-//       <EligibilityForm onResults={setResults} />
-//       <EligibleSchemesList eligibilityResults={results} />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import React, { useState, useEffect } from 'react';
 import EligibilityForm from './components/EligibilityForm';
 import EligibleSchemesList from './components/EligibleSchemesList';
+import VoiceAssistant from './components/VoiceAssistant';  // ← ADDED
 import './App.css';
 
 function App() {
@@ -67,6 +27,10 @@ function App() {
     localStorage.setItem('lastResults', JSON.stringify(data));
   };
 
+  const handleVoiceCommand = (command) => {  // ← ADDED
+    console.log('Voice command received:', command);
+  };  // ← ADDED
+
   return (
     <div className="app-container">
       {!isOnline && (
@@ -75,6 +39,7 @@ function App() {
         </div>
       )}
       <h1 className="app-title">Government Scheme Eligibility Checker</h1>
+      <VoiceAssistant onCommand={handleVoiceCommand} />  {/* ← ADDED */}
       <EligibilityForm onResults={handleResults} />
       <EligibleSchemesList results={results} />
     </div>
