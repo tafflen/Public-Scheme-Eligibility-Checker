@@ -4,4 +4,3 @@ python-multipart
 speechrecognition
 pyttsx3
 vosk
-react-scripts
