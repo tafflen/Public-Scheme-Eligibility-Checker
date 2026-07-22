@@ -69,17 +69,20 @@ Instead of using an unpredictable AI model to decide eligibility, we built trans
 
 \`\`\`
 public Scheme/
+
 ├── backend/
 │   ├── app.py               # FastAPI app entry point
 │   ├── database.py          # DB connection setup
 │   ├── modals/               # Data models (Scheme, User)
 │   ├── routes/               # API endpoints
 │   └── services/              # Business logic (eligibility, seeding)
+
 ├── frontend/
 │   ├── src/
 │   │   ├── components/        # React components (Form, Voice Assistant, etc.)
 │   │   ├── App.js
 │   │   └── App.css
+
 └── README.md
 \`\`\`
 
