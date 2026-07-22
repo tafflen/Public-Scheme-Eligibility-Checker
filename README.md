@@ -18,7 +18,9 @@ An AI-powered, offline-first app that helps Indian citizens instantly check whic
 
 \`\`\`bash
 cd backend
+
 pip install fastapi uvicorn sqlalchemy
+
 uvicorn app:app --reload
 \`\`\`
 
@@ -29,7 +31,9 @@ API docs available at: `http://127.0.0.1:8000/docs`
 
 \`\`\`bash
 cd frontend
+
 npm install
+
 npm start
 \`\`\`
 
